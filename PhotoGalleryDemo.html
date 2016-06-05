@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <title>React Photo Gallery</title>
+    <link rel="stylesheet" type="text/css" href="PhotoGalleryDemo.css" />
+  </head>
+  <body>
+    <div id="photoGalleryContainer"></div>
+
+    <!-- Load React and Babel transformer scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.0.1/react-dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+
+    <!-- Load JSX file containing photo gallery component definitions -->
+    <script type="text/babel" src="PhotoGalleryDemo.jsx"></script>
+
+    <!-- Render the photo gallery into the container div -->
+    <script type="text/babel">
+      var photoURLs = ["images/IMG_1.jpg", "images/IMG_2.jpg", "images/IMG_3.jpg" ];
+      ReactDOM.render(
+        <PhotoGallery photoURLs={photoURLs} />, document.getElementById('photoGalleryContainer')
+      );
+    </script>
+  </body>
+</html>
